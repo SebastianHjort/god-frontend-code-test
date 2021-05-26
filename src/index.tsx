@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { StyleProvider, ThemePicker } from 'vcc-ui';
 import App from './App';
+import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StyleProvider>
+    <ThemePicker variant="light">
+      <App />
+    </ThemePicker>
+  </StyleProvider>,
   document.getElementById('root')
 );
 
